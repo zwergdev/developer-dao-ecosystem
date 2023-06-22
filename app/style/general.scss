@@ -1,0 +1,110 @@
+@import "destyle.css";
+$white: #F3F1E5;
+$dark: #202020;
+$placeholderColor: rgba(0, 0, 0, .5);
+
+*{
+  padding: 0;
+  margin: 0;
+  color: $white;
+  line-height: 120%;
+}
+a{
+  text-decoration: none;
+  display: flex;
+}
+body{
+  background-color: black;
+  min-height: 100vh;
+}
+input, textarea, .selectSectorBtn{
+  width: 320px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  color: $dark;
+  text-align: left;
+  font-weight: 600;
+  background-color: $white;
+  outline: none;
+  box-shadow: 0 0 15px rgba(255, 255, 255, .5);
+  transition: all .35s linear;
+  &:focus, &:hover{
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    outline: none;
+  }
+}
+label{
+  cursor: text;
+  position: absolute;
+  width: max-content;
+  top: 16px;
+  left: 11px;
+  display: flex;
+  color: $placeholderColor;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all .5s ease-in-out;
+  &.typed, &.toTop{
+    top: -22px;
+    color: $white;
+  }
+}
+.container{
+  width: min(100% - 15px, 100vw);
+  margin-inline: auto;
+}
+.button{
+  padding: 10px 20px;
+  font-weight: 600;
+  background-color: rgba(236, 227, 227, .1);
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: all .35s linear;
+  text-transform: uppercase;
+}
+.button:hover{
+  background-color: rgba(236, 227, 227, .2);
+  border: 1px solid rgba(255, 255, 255, 1);
+  color: #fff;
+}
+.bgWrap{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+}
+.bgWrap img{
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  opacity: .2;
+  filter: blur(5px);
+}
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+@keyframes blinking {
+  0%{
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  50%{
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+
+  }
+  100%{
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+  }
+}
