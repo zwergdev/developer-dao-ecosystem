@@ -36,7 +36,7 @@ const ProjectSearch = () => {
 	return (
 		<div className='searchbarBox'>
 			<label htmlFor='search' className={search && 'toTop'}>
-				Search Zwerg Project
+				Search D_D project
 			</label>
 			<input
 				className='searchbar'

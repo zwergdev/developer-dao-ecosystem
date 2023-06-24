@@ -11,7 +11,7 @@ export default function ProjectsList() {
 	const rendered = () => {
 		if (status !== Status.loading) {
 			return (
-				<div className='projectsBox'>
+				<div className='projectsBox container'>
 					{projects.map((project: Project, idx: number) => (
 						<Link href={`/projects/${project.name.toLowerCase()}`} key={idx} className='item'>
 							<Image src={project.image} width={100} height={100} alt='project logo' />

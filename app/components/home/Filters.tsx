@@ -15,16 +15,18 @@ export default function Filters() {
 		setStatus(Status.filter)
 	}
 	return (
-		<div className='filters'>
-			{buttons.map((button, idx) => (
-				<button
-					key={idx}
-					className={filter === button.value ? 'button active' : 'button'}
-					value={button.value}
-					onClick={(e: MouseEvent<HTMLButtonElement>) => onChangeFilter(e)}>
-					{button.value}
-				</button>
-			))}
+		<div className='filtersBox'>
+			<div className='filters container'>
+				{buttons.map((button, idx) => (
+					<button
+						key={idx}
+						className={filter === button.value ? 'button active' : 'button'}
+						value={button.value}
+						onClick={(e: MouseEvent<HTMLButtonElement>) => onChangeFilter(e)}>
+						{button.value}
+					</button>
+				))}
+			</div>
 		</div>
 	)
 }

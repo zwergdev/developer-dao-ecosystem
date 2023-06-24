@@ -1,12 +1,11 @@
 import './style/home.scss'
-import {JetBrains_Mono} from 'next/font/google'
+import {Inter} from 'next/font/google'
 import Footer from './components/general/Footer'
-import Image from 'next/image'
 import Header from './components/general/Header'
 import {ReactNode} from 'react'
 import {Metadata} from 'next'
 
-const jetBrains = JetBrains_Mono({subsets: ['latin']})
+const font = Inter({subsets: ['latin']})
 
 export const metadata: Metadata = {
 	title: 'Zwerg Ecosystem',
@@ -33,10 +32,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: ReactNode}) {
 	return (
 		<html lang='en'>
-			<body className={jetBrains.className}>
-				<div className='bgWrap'>
-					<Image priority={true} src='/img/bg.jpg' width={1280} height={720} alt='background' />
-				</div>
+			<body className={font.className}>
 				<Header />
 				{children}
 				<Footer />

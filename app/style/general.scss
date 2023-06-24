@@ -1,6 +1,6 @@
 @import "destyle.css";
-$white: #F3F1E5;
-$dark: #202020;
+$white: #ffffff;
+$dark: #000000;
 $placeholderColor: rgba(0, 0, 0, .5);
 
 *{
@@ -8,24 +8,32 @@ $placeholderColor: rgba(0, 0, 0, .5);
   margin: 0;
   color: $white;
   line-height: 120%;
+  &::selection{
+    background-color: #ef0505;
+  }
+}
+img{
+  &::selection{
+    background-color: transparent;
+  }
 }
 a{
   text-decoration: none;
   display: flex;
 }
 body{
-  background-color: black;
+  background-color: $dark;
   min-height: 100vh;
 }
 input, textarea, .selectSectorBtn{
   width: 320px;
-  padding: 10px;
+  padding: 8px 10px;
   font-size: 20px;
-  border-radius: 10px;
+  border-radius: 6px;
   border: 1px solid #000000;
   color: $dark;
   text-align: left;
-  font-weight: 600;
+  font-weight: 500;
   background-color: $white;
   outline: none;
   box-shadow: 0 0 15px rgba(255, 255, 255, .5);
@@ -39,7 +47,7 @@ label{
   cursor: text;
   position: absolute;
   width: max-content;
-  top: 16px;
+  top: 14px;
   left: 11px;
   display: flex;
   color: $placeholderColor;
@@ -52,24 +60,28 @@ label{
   }
 }
 .container{
-  width: min(100% - 15px, 100vw);
+  width: min(100% - 15px, 1280px);
   margin-inline: auto;
 }
 .button{
-  padding: 10px 20px;
-  font-weight: 600;
-  background-color: rgba(236, 227, 227, .1);
-  font-size: 18px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 0 12px;
+  height: 36px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  transition: all .35s linear;
-  text-transform: uppercase;
+  justify-content: center;
+  font-weight: 500;
+  outline: none;
+  border-radius: 6px;
+  background-color: #000000;
+  border: 1px solid #333333;
+  transition: all .3s ease-in-out;
 }
 .button:hover{
-  background-color: rgba(236, 227, 227, .2);
+  box-shadow: 0 0 10px #ffffff;
+  background-color: rgba(236, 227, 227, .1);
   border: 1px solid rgba(255, 255, 255, 1);
-  color: #fff;
 }
 .bgWrap{
   position: fixed;

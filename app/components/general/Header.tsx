@@ -6,8 +6,9 @@ export default function Header() {
 		<header>
 			<div className='container'>
 				<nav>
-					<Link href='/'>
-						<Image src='/img/logo.png' width={75} height={75} alt='logo' />
+					<Link href='/' className='logoBox'>
+						<Image src='/img/logo.jpg' className='logo' width={32} height={32} alt='logo' />
+						Developer DAO
 					</Link>
 					<Link href={'/submit'} className='button'>
 						Submit Project
