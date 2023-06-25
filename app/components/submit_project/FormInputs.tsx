@@ -15,7 +15,7 @@ const inputs: Input[] = [
 	{name: 'medium', type: 'url', placeholder: 'Medium/blog link'},
 	{name: 'gitbook', type: 'url', placeholder: 'Whitepaper/docs link'},
 	{name: 'site', type: 'url', placeholder: 'Website link'},
-	{name: 'zealy', type: 'url', placeholder: 'Zealy/Quest3/Galxe etc.'}
+	{name: 'github', type: 'url', placeholder: 'GitHub link'}
 ]
 
 const FormInputs = () => {

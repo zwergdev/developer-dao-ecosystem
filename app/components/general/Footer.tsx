@@ -12,7 +12,7 @@ export default function Footer() {
 					</Link>
 					.
 				</p>
-				<Link href='https://github.com/zwergdev/ecosystem'>
+				<Link href='https://github.com/zwergdev/developer-dao-ecosystem'>
 					<Image src='/img/socials/github.svg' width={30} height={30} className='gitLogo' alt='github logo' />
 				</Link>
 			</div>

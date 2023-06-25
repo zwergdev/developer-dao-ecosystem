@@ -21,7 +21,7 @@ header{
     gap: 10px;
     font-weight: 600;
     .logo{
-      border-radius: 50%;
+      border-radius: 5px;
     }
   }
   .container nav{
@@ -332,15 +332,24 @@ header{
       flex-direction: column;
       gap: 15px;
       h1{
+        width: max-content;
         text-align: left;
         font-size: 50px;
+        font-weight: 500;
       }
       p{
         font-size: 20px;
       }
       .socials{
         display: flex;
+        justify-content: center;
         gap: 30px;
+        a{
+          transition: all .2s ease-in-out;
+          &:hover{
+            opacity: .5;
+          }
+        }
         &.loading{
           opacity: .5;
           span{
@@ -376,6 +385,7 @@ header{
       .projectDesc{
         border-top: 1px solid rgba(255, 255, 255, 0.45);
         padding-top: 30px;
+        width: 100%;
       }
     }
   }
@@ -385,7 +395,11 @@ header{
       .projectInfo{
         align-items: center;
         h1{
+          max-width: 320px;
           text-align: center;
+        }
+        .socials{
+          flex-wrap: wrap;
         }
       }
     }

@@ -2,8 +2,7 @@ import {MouseEvent, useContext} from 'react'
 import {HomeContext} from '@/services/contextAPI'
 import {Status} from '@/services/types'
 
-const buttons = [{value: 'NFT'}, {value: 'DeFi'}, {value: 'Wallet'}, {value: 'Marketplace'}, {value: 'Media'}]
-
+const buttons = [{value: 'Sub-DAO'}, {value: 'Project'}, {value: 'Celebrity'}]
 export default function Filters() {
 	let {filter, setFilter, setStatus} = useContext(HomeContext)
 	const onChangeFilter = (e: MouseEvent<HTMLButtonElement>) => {

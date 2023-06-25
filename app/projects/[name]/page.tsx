@@ -10,7 +10,7 @@ type Props = {
 }
 
 async function getData(name: string) {
-	const response = await fetch(`${SITE_URL}/api/projects/${name}`)
+	const response = await fetch(`${SITE_URL}/api/projects/${name}`, {next: {revalidate: 3600}})
 	return response.json()
 }
 
@@ -28,6 +28,7 @@ export default async function Project({params: {name}}: Props) {
 			<div className='projectBox'>
 				<Image
 					priority={true}
+					quality={100}
 					className='projectLogo'
 					src={project.image}
 					width={200}
@@ -42,7 +43,7 @@ export default async function Project({params: {name}}: Props) {
 				</div>
 				<p className='projectDesc'>{project.desc}</p>
 			</div>
-			<Link className='button back' href={'/'}>
+			<Link className='button back' href={'/'} scroll={true}>
 				BACK
 			</Link>
 		</main>

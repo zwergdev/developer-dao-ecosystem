@@ -5,7 +5,8 @@ import discord from '@/public/img/socials/discord.svg'
 import medium from '@/public/img/socials/medium.svg'
 import gitbook from '@/public/img/socials/gitbook.svg'
 import site from '@/public/img/socials/site.svg'
-import zealy from '@/public/img/socials/zealy.svg'
+import youtube from '@/public/img/socials/youtube.svg'
+import github from '@/public/img/socials/github.svg'
 import {Project} from '@/app/api/projects/projects'
 import {FC} from 'react'
 
@@ -18,7 +19,8 @@ const socialLinksImages: SocialLinks = {
 	medium: medium,
 	gitbook: gitbook,
 	site: site,
-	zealy: zealy
+	youtube: youtube,
+	github: github
 }
 interface ProjectSocialsProps {
 	project: Project
@@ -26,18 +28,11 @@ interface ProjectSocialsProps {
 const Socials: FC<ProjectSocialsProps> = ({project}) => {
 	return (
 		<div className='socials'>
-			{Object.entries(project.socials as {[key: string]: string}).map(
-				([key, value]: any) => (
-					<Link key={key} href={value} target='_blank'>
-						<Image
-							src={socialLinksImages[key]}
-							width={30}
-							height={30}
-							alt={''}
-						/>
-					</Link>
-				)
-			)}
+			{Object.entries(project.socials as {[key: string]: string}).map(([key, value]: any) => (
+				<Link key={key} href={value} target='_blank'>
+					<Image src={socialLinksImages[key]} width={30} height={30} alt={''} priority={true} />
+				</Link>
+			))}
 		</div>
 	)
 }

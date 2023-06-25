@@ -14,7 +14,7 @@ export type formValues = {
 	medium: string
 	gitbook: string
 	site: string
-	zealy: string
+	github: string
 	sector: string
 	desc: string
 }
@@ -28,7 +28,7 @@ export default function () {
 		medium: '',
 		gitbook: '',
 		site: '',
-		zealy: '',
+		github: '',
 		sector: '',
 		desc: ''
 	})

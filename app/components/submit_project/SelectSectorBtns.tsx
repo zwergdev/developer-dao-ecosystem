@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react'
 import {FormContext} from '@/services/contextAPI'
 
-const selectSectorBtnValues = ['Wallet', 'Media', 'NFT', 'DeFi', 'Marketplace']
+const selectSectorBtnValues = ['Sub-DAO', 'Project', 'Celebrity']
 
 const SelectSectorBtns = () => {
 	let {formValues, handleInputChange} = useContext(FormContext)
@@ -11,7 +11,7 @@ const SelectSectorBtns = () => {
 	const calculateHeight = () => {
 		if (sectorsShowed) {
 			if (sectorValue) {
-				return (selectSectorBtnValues.length + 1) * 32
+				return (selectSectorBtnValues.length + 1) * 29
 			} else {
 				return selectSectorBtnValues.length * 37
 			}

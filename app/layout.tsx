@@ -8,21 +8,21 @@ import {Metadata} from 'next'
 const font = Inter({subsets: ['latin']})
 
 export const metadata: Metadata = {
-	title: 'Zwerg Ecosystem',
-	description: 'Explore the Zwerg Ecosystem',
+	title: 'Developer DAO Ecosystem',
+	description: 'Explore Developer DAO ecosystem',
 	themeColor: 'black',
 	openGraph: {
-		title: 'Zwerg Ecosystem',
-		description: 'Explore the Zwerg Ecosystem',
-		url: 'https://ecosystem-ten.vercel.app',
-		siteName: 'Ecosystem Template',
+		title: 'Developer DAO Ecosystem',
+		description: 'Explore Developer DAO ecosystem',
+		url: 'https://github.com/zwergdev/developer-dao-ecosystem',
+		siteName: 'Developer DAO Ecosystem',
 		locale: 'en_US',
 		type: 'website'
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'Zwerg Ecosystem',
-		description: 'Explore the Zwerg Ecosystem',
+		title: 'Developer DAO Ecosystem',
+		description: 'Explore Developer DAO ecosystem',
 		siteId: '1654564851425869826',
 		creator: '@zwergdev',
 		creatorId: '1654564851425869826'

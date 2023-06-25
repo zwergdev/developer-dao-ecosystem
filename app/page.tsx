@@ -18,12 +18,12 @@ export default function () {
 					</div>
 				</div>
 				<Image
-					src='/img/main-banner.png'
+					src='/img/banner.jpg'
 					className='bannerImage'
 					width={788}
 					height={610}
 					alt='banner'
-					priority
+					priority={true}
 					quality={100}
 				/>
 			</section>

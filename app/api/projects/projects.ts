@@ -1,7 +1,7 @@
 export type Project = {
 	name: string
 	image: string
-	sector: 'Wallet' | 'Media' | 'NFT' | 'DeFi' | 'Marketplace'
+	sector: 'Sub-DAO' | 'Project' | 'Celebrity'
 	rating: 'Low' | 'Middle' | 'High'
 	socials: {
 		twitter: `https://${string}`
@@ -9,343 +9,183 @@ export type Project = {
 		medium?: `https://${string}`
 		gitbook?: `https://${string}`
 		site?: `https://${string}`
-		zealy?: `https://${string}`
+		youtube?: `https://${string}`
+		github?: `https://${string}`
 	}
-	desc?: string
+	desc: string
 }
 export const projects: Project[] = [
 	{
-		name: 'SuiGlobal',
-		image: '/img/projects/suiglobal.jpg',
-		sector: 'Media',
-		rating: 'High',
-		socials: {
-			twitter: 'https://twitter.com/SuiGlobal',
-			discord: 'https://discord.com/invite/suiglobalofficial',
-			site: 'https://suiglobal.com/',
-			gitbook: 'https://fischermingo.gitbook.io/aptomingos-whitepaper/',
-			zealy: 'https://zealy.io/c/suiglobal/questboard',
-			medium: 'https://suiglobal.medium.com/'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Aptomingos',
-		image: '/img/projects/aptomingos.jpg',
-		sector: 'NFT',
-		rating: 'High',
-		socials: {
-			twitter: 'https://twitter.com/Aptomingos',
-			discord: 'https://discord.gg/CxhJMXrjAW',
-			site: 'https://aptomingos.io/',
-			gitbook: 'https://fischermingo.gitbook.io/aptomingos-whitepaper/'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Coin98',
-		image: '/img/projects/coin98.jpg',
-		sector: 'Wallet',
+		name: 'DeForm',
+		image: '/img/projects/deForm.jpg',
+		sector: 'Project',
 		rating: 'Middle',
 		socials: {
-			twitter: 'https://twitter.com/coin98_wallet',
-			discord: 'https://discord.com/invite/ytkeARXYu9',
-			site: 'https://coin98.com/',
-			gitbook: 'https://docs.coin98.com/'
+			twitter: 'https://twitter.com/deformapp',
+			site: 'https://www.deform.cc/',
+			gitbook: 'https://contributionlabs.notion.site/DeForm-Overview-d704d1f4974a45abb067419a541db3b0'
 		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
+		desc: 'Web3 forms and surveys for your token-enabled community. The most powerful survey creation tool that helps you identify your audience and understand your community with ease.'
 	},
 	{
-		name: 'Sui Ecosystem',
-		image: '/img/projects/suiecosystem.jpg',
-		sector: 'Media',
+		name: 'DevNTell',
+		image: '/img/projects/devNTell.jpg',
+		sector: 'Project',
+		rating: 'Middle',
+		socials: {
+			twitter: 'https://twitter.com/devntellxyz',
+			youtube: 'https://www.youtube.com/c/DeveloperDAO/featured',
+			medium: 'https://blog.developerdao.com/series/devntell',
+			site: 'https://www.notion.so/DevNTell-e0513133df974ff09e1b5bf4fedc2225'
+		},
+		desc: 'DevNTell is a 30-minute window for builders to showcase something they are passionate about or have been working on in web3. This could be an awesome project you’ve been working on, demonstrating unit-testing best practices, automation goodies, smart contracts, how to structure a project, etc… Basically, if you’ve got a passion for something, this is your opportunity to share it with the web3 community.'
+	},
+	{
+		name: 'Kay',
+		image: '/img/projects/kay.jpg',
+		sector: 'Celebrity',
 		rating: 'High',
 		socials: {
-			twitter: 'https://twitter.com/SuiEcosystem',
-			discord: 'https://discord.com/invite/suiecosystem',
-			site: 'https://suiecosystem.top/',
-			zealy: 'https://zealy.io/c/suiecosystem/questboard'
+			twitter: 'https://twitter.com/K4y1s',
+			site: 'https://kay.is/',
+			github: 'https://github.com/kay-is'
 		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
+		desc: 'Meet Kay, a developer, blogger, teacher, and author from Stuttgart, Germany. He specialize in software development, with a focus on cloud computing, serverless technology, security, API development, and Web3. Kay offers services such as creating blog articles, books, and documentation. Currently, they serve as the editor-in-chief for the Developer DAO blog, a global community dedicated to teaching and learning about Web3. With over 15 years of experience, Kay has written hundreds of articles, attracting over 15,000 followers and half a million views on their blog.'
 	},
 	{
-		name: 'Aptonauts',
-		image: '/img/projects/aptonauts.jpg',
-		sector: 'NFT',
+		name: 'D_D Women',
+		image: '/img/projects/ddWomen.jpg',
+		sector: 'Sub-DAO',
+		rating: 'Middle',
+		socials: {
+			twitter: 'https://twitter.com/devdaowomen'
+		},
+		desc: 'Representing women and nonbinary folks building and hacking together.'
+	},
+	{
+		name: 'Papi Billy',
+		image: '/img/projects/papiBilly.jpg',
+		sector: 'Celebrity',
+		rating: 'High',
+		socials: {
+			twitter: 'https://twitter.com/wc49358',
+			site: 'https://www.billyjitsu.xyz/'
+		},
+		desc: 'Billy is a software developer, project manager, and crypto enthusiast. He is passionate about blockchain technology and contributes to the Developer DAO community through workshops and technical articles. Billy is experienced in Developer Relations and hosts online workshops on "Web3" topics. He is driven and actively contributes to the blockchain community.'
+	},
+	{
+		name: 'vibesIRL',
+		image: '/img/projects/vibesIRL.jpg',
+		sector: 'Sub-DAO',
 		rating: 'Low',
 		socials: {
-			twitter: 'https://twitter.com/Aptonauts_NFT',
-			discord: 'https://discord.com/invite/GjU9F9qBbN'
+			twitter: 'https://twitter.com/vibesIRL'
 		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
+		desc: 'Vibe with frens IRL all over the world. Get Devs Dancing!'
 	},
 	{
-		name: 'Araya Finance',
-		image: '/img/projects/araya.jpg',
-		sector: 'DeFi',
+		name: 'Web3 Afrika',
+		image: '/img/projects/web3afrika.jpg',
+		sector: 'Project',
+		rating: 'Middle',
+		socials: {
+			twitter: 'https://twitter.com/web3afrika',
+			site: 'https://www.web3afrika.com/',
+			github: 'https://github.com/Web3Afrika',
+			youtube: 'https://www.youtube.com/@web3afrika',
+			medium: 'https://blog.web3afrika.com/',
+			discord: 'https://discord.com/invite/YMJ49PDTym'
+		},
+		desc: 'Web3 Afrika exists to accelerate the education and opportunities of a new wave of builders and bring diversity into web3 conversations globally by fostering communities in Africa, Africans in diaspora, and persons of African descent from across the world.'
+	},
+	{
+		name: 'D_D Academy',
+		image: '/img/projects/ddAcademy.jpg',
+		sector: 'Sub-DAO',
 		rating: 'Low',
 		socials: {
-			twitter: 'https://twitter.com/ArayaFinance',
-			discord: 'https://discord.com/invite/QP3UqGDkuD'
+			twitter: 'https://twitter.com/devdao_academy',
+			site: 'https://academy.developerdao.com/',
+			github: 'https://github.com/developer-dao/academy'
 		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
+		desc: 'D_D Academy is on a mission to educate coders to the exciting possibilities of building web3 Open Source.'
 	},
 	{
-		name: 'BlueMove',
-		image: '/img/projects/bluemove.jpg',
-		sector: 'Marketplace',
-		rating: 'High',
-		socials: {
-			twitter: 'https://twitter.com/BlueMove_OA',
-			discord: 'https://discord.com/invite/bluemove',
-			site: 'https://bluemove.net/',
-			gitbook: 'https://docs.bluemove.net/docs/welcome-to-bluemove'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Capybaras',
-		image: '/img/projects/capybaras.jpg',
-		sector: 'NFT',
-		rating: 'High',
-		socials: {
-			twitter: 'https://twitter.com/SuiNetwork',
-			discord: 'https://discord.com/invite/sui',
-			site: 'https://sui.io/',
-			gitbook: 'https://github.com/MystenLabs/sui/blob/main/doc/paper/sui.pdf'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Clutchy',
-		image: '/img/projects/clutchy.jpg',
-		sector: 'Marketplace',
-		rating: 'High',
-		socials: {
-			twitter: 'https://twitter.com/Clutchy_io',
-			discord: 'https://discord.com/invite/clutchyNFT',
-			site: 'https://clutchy.io/'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Ethos',
-		image: '/img/projects/ethos.jpg',
-		sector: 'Wallet',
-		rating: 'Middle',
-		socials: {
-			twitter: 'https://twitter.com/EthosWalletXYZ',
-			discord: 'https://discord.com/invite/ethoswallet',
-			site: 'https://ethoswallet.xyz/',
-			gitbook: 'https://docs.ethoswallet.xyz/'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Fewcha Wallet',
-		image: '/img/projects/fewchawallet.jpg',
-		sector: 'Wallet',
-		rating: 'Middle',
-		socials: {
-			twitter: 'https://twitter.com/FewchaWallet',
-			discord: 'https://discord.com/invite/fewcha',
-			site: 'https://fewcha.app/',
-			gitbook: 'https://docs.fewcha.app/',
-			medium: 'https://medium.com/@fewchawallet'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'funnyybuns',
-		image: '/img/projects/funnyybuns.jpg',
-		sector: 'NFT',
-		rating: 'High',
-		socials: {
-			twitter: 'https://twitter.com/funnyybuns',
-			discord: 'https://discord.com/invite/funnyybuns',
-			site: 'https://funnyybuns.com/',
-			medium: 'https://medium.com/@funnyybuns'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Pontem Network',
-		image: '/img/projects/pontem.jpg',
-		sector: 'DeFi',
-		rating: 'High',
-		socials: {
-			twitter: 'https://twitter.com/PontemNetwork',
-			discord: 'https://discord.com/invite/44QgPFHYqs',
-			site: 'https://pontem.network/',
-			medium: 'https://pontem.medium.com/',
-			gitbook: 'https://docs.pontem.network/00.-about-pontem/about'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Souffl3',
-		image: '/img/projects/souffl3.jpg',
-		sector: 'Marketplace',
-		rating: 'High',
-		socials: {
-			twitter: 'https://twitter.com/nft_souffl3',
-			discord: 'https://discord.com/invite/souffl3',
-			site: 'https://souffl3.com/',
-			gitbook: 'https://github.com/ENJOY-LAB/souffl3-docs'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Suiet',
-		image: '/img/projects/suiet.jpg',
-		sector: 'Wallet',
-		rating: 'High',
-		socials: {
-			twitter: 'https://twitter.com/suiet_wallet',
-			discord: 'https://discord.com/invite/XQspMzXNXu',
-			site: 'https://suiet.app/',
-			gitbook: 'https://github.com/suiet',
-			medium: 'https://medium.com/@suiet_wallet'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Suipunks',
-		image: '/img/projects/suipunks.jpg',
-		sector: 'NFT',
-		rating: 'Middle',
-		socials: {
-			twitter: 'https://twitter.com/theSuiPunks',
-			discord: 'https://discord.com/invite/suipunks',
-			site: 'https://suipunks.xyz/',
-			zealy: 'https://zealy.io/c/thesuipunks/questboard'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Wizard Land',
-		image: '/img/projects/wizardland.jpg',
-		sector: 'NFT',
-		rating: 'High',
-		socials: {
-			twitter: 'https://twitter.com/WizardLandSui',
-			discord: 'https://discord.com/invite/wizardlandsui',
-			site: 'https://wizardlandsui.com/',
-			zealy: 'https://zealy.io/c/wizardlandsui-nft/questboard',
-			gitbook: 'https://wizardland.gitbook.io/welcome/'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Mover',
-		image: '/img/projects/mover.jpg',
-		sector: 'DeFi',
-		rating: 'High',
-		socials: {
-			twitter: 'https://twitter.com/moverxyz',
-			site: 'https://mov3r.xyz/',
-			medium: 'https://moverxyz.medium.com/',
-			gitbook: 'https://github.com/mov3r'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Ditto',
-		image: '/img/projects/ditto.jpg',
-		sector: 'DeFi',
-		rating: 'Middle',
-		socials: {
-			twitter: 'https://twitter.com/Ditto_Finance',
-			discord: 'https://discord.com/invite/ditto-fi',
-			medium: 'https://medium.com/@dittoprotocol',
-			site: 'https://www.dittofinance.io/',
-			gitbook: 'https://dittofinance.gitbook.io/docs/'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Tortuga',
-		image: '/img/projects/tortuga.jpg',
-		sector: 'DeFi',
+		name: 'WBW3',
+		image: '/img/projects/wbw3.jpg',
+		sector: 'Project',
 		rating: 'Low',
 		socials: {
-			twitter: 'https://twitter.com/TortugaFinance',
-			discord: 'https://discord.com/invite/tortuga-finance',
-			site: 'https://tortuga.finance/',
-			gitbook: 'https://docs.tortuga.finance/product-docs/'
+			twitter: 'https://twitter.com/womenbuildweb3'
 		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
+		desc: 'BUIDL Accelerator. Education, opportunities and funding to cultivate top engineering talent. Membership opening soon.'
 	},
 	{
-		name: 'Martian',
-		image: '/img/projects/martian.jpg',
-		sector: 'Wallet',
+		name: 'Raisin Labs',
+		image: '/img/projects/raisinLabs.jpg',
+		sector: 'Project',
 		rating: 'Low',
 		socials: {
-			twitter: 'https://twitter.com/martian_wallet',
-			discord: 'https://discord.com/invite/martian-wallet',
-			medium: 'https://medium.com/@martian-wallet',
-			site: 'https://martianwallet.xyz/',
-			gitbook: 'https://docs.martianwallet.xyz/docs/'
+			twitter: 'https://twitter.com/Raisin_Labs',
+			github: 'https://github.com/crypdoughdoteth/Raisin-CLI'
 		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
+		desc: 'Building the protocols that shape the world of DeFi, starting with Raisin, the modular fundraising stack.'
 	},
 	{
-		name: 'Blur',
-		image: '/img/projects/blur.jpg',
-		sector: 'Marketplace',
-		rating: 'High',
-		socials: {
-			twitter: 'https://twitter.com/blur_io',
-			discord: 'https://discord.com/invite/blurdao',
-			site: 'https://blur.io/'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Topaz',
-		image: '/img/projects/topaz.jpg',
-		sector: 'Marketplace',
-		rating: 'Middle',
-		socials: {
-			twitter: 'https://twitter.com/TopazMarket',
-			discord: 'https://discord.com/invite/SWVxuJkFSH',
-			site: 'https://www.topaz.so/'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Incrypted',
-		image: '/img/projects/incrypted.jpg',
-		sector: 'Media',
-		rating: 'High',
-		socials: {
-			twitter: 'https://twitter.com/incrypted',
-			discord: 'https://discord.com/invite/SWVxuJkFSH',
-			site: 'https://incrypted.com/'
-		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
-	},
-	{
-		name: 'Zwerg',
-		image: '/img/projects/zwerg.jpg',
-		sector: 'Media',
+		name: 'Woop Pay',
+		image: '/img/projects/woopPay.jpg',
+		sector: 'Project',
 		rating: 'Low',
 		socials: {
-			twitter: 'https://twitter.com/zwergdev',
-			gitbook: 'https://github.com/zwergdev'
+			twitter: 'https://twitter.com/woop_pay',
+			site: 'https://www.wooppay.xyz/'
 		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
+		desc: 'Cryptocurrency payment requests.'
 	},
 	{
-		name: 'Whale',
-		image: '/img/projects/whale.jpg',
-		sector: 'Media',
+		name: 'kempsterrrr',
+		image: '/img/projects/kempsterrrr.jpg',
+		sector: 'Celebrity',
+		rating: 'High',
+		socials: {
+			twitter: 'https://twitter.com/kempsterrrr'
+		},
+		desc: 'Growth Ops Lead & Foundation Director of Developer DAO'
+	},
+	{
+		name: 'TalentLayer',
+		image: '/img/projects/talentLayer.jpg',
+		sector: 'Project',
 		rating: 'Middle',
 		socials: {
-			twitter: 'https://twitter.com/SuiWhale',
-			discord: 'https://discord.com/invite/E32JG3f4gv'
+			twitter: 'https://twitter.com/TalentLayer',
+			site: 'https://www.talentlayer.org/',
+			gitbook: 'https://docs.talentlayer.org/',
+			medium: 'https://medium.com/talentlayer'
 		},
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae consequuntur, delectus enim eos eum facilis fugit harum hic magnam numquam officiis perspiciatis qui quia reiciendis repudiandae ullam velit.'
+		desc: 'TalentLayer is infrastructure for open service markets; backend tooling for building interoperable marketplaces that leverage an on-chain liquidity pool of users and services.'
+	},
+	{
+		name: 'P3RKS',
+		image: '/img/projects/p3rks.jpg',
+		sector: 'Project',
+		rating: 'Low',
+		socials: {
+			twitter: 'https://twitter.com/getP3RKS',
+			site: 'https://p3rks.xyz/'
+		},
+		desc: 'Rewards for DAO Contributors '
+	},
+	{
+		name: 'Patrick Skinner',
+		image: '/img/projects/pSkinnerTech.jpg',
+		sector: 'Celebrity',
+		rating: 'High',
+		socials: {
+			twitter: 'https://twitter.com/PSkinnerTech',
+			site: 'https://patrickskinner.tech/',
+			github: 'https://github.com/PSkinnerTech'
+		},
+		desc: 'Software Engineer, web3 developer, technical writer. DevRel at Developer DAO'
 	}
 ]

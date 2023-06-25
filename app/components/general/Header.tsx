@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import logo from '../../../public/img/logo.jpg'
 
 export default function Header() {
 	return (
@@ -7,7 +8,7 @@ export default function Header() {
 			<div className='container'>
 				<nav>
 					<Link href='/' className='logoBox'>
-						<Image src='/img/logo.jpg' className='logo' width={32} height={32} alt='logo' priority />
+						<Image src={logo} className='logo' width={32} height={32} alt='logo' priority={true} />
 						<span>Developer DAO</span>
 					</Link>
 					<Link href={'/submit'} className='button'>
