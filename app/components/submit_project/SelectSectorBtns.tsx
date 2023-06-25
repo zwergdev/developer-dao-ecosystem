@@ -16,7 +16,7 @@ const SelectSectorBtns = () => {
 				return selectSectorBtnValues.length * 37
 			}
 		} else {
-			return 48.5
+			return 42.5
 		}
 	}
 	const handleSectorChange = (value: string) => {

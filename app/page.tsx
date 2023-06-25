@@ -1,7 +1,6 @@
 'use client'
 import Home from '@/app/components/home/Home'
 import Image from 'next/image'
-import banner from '../public/img/banner.png'
 import BannerButtons from '@/app/components/home/BannerButtons'
 
 export default function () {
@@ -18,7 +17,15 @@ export default function () {
 						<BannerButtons />
 					</div>
 				</div>
-				<Image src={banner} width={788} height={610} alt='banner' />
+				<Image
+					src='/img/main-banner.png'
+					className='bannerImage'
+					width={788}
+					height={610}
+					alt='banner'
+					priority
+					quality={100}
+				/>
 			</section>
 			<section className='projects' id='projects'>
 				<Home />

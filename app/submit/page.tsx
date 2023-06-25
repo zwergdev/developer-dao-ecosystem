@@ -1,5 +1,4 @@
 'use client'
-import '../style/submit.scss'
 import SelectSectorBtns from '@/app/components/submit_project/SelectSectorBtns'
 import FormInputs from '@/app/components/submit_project/FormInputs'
 import DescriptionTextArea from '@/app/components/submit_project/DescriptionTextArea'
@@ -57,17 +56,15 @@ export default function () {
 	}, [formValues.name, formValues.twitter, formValues.desc])
 
 	return (
-		<main>
-			<div className='submitBox'>
-				<FormContext.Provider value={{formValues, handleInputChange, status}}>
-					<FormInputs />
-					<SelectSectorBtns />
-					<DescriptionTextArea />
-					<button className='button' onClick={sendForm}>
-						{status}
-					</button>
-				</FormContext.Provider>
-			</div>
-		</main>
+		<>
+			<FormContext.Provider value={{formValues, handleInputChange, status}}>
+				<FormInputs />
+				<SelectSectorBtns />
+				<DescriptionTextArea />
+				<button className='button' onClick={sendForm}>
+					{status}
+				</button>
+			</FormContext.Provider>
+		</>
 	)
 }

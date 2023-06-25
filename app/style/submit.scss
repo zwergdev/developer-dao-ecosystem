@@ -56,7 +56,7 @@
     padding: 10px;
     transition: all .5s ease-in-out;
     &.valueIsSelected{
-      padding: 12.6px 10px;
+      padding: 9px 10px;
       &:has(button) .selectSectorBtnValue:first-of-type{
         margin-top: 5px;
         padding-top: 5px;
@@ -65,6 +65,10 @@
     }
     label{
       cursor: pointer;
+      top: 13px;
+      &.toTop{
+        top: -22px;
+      }
     }
     .selectSectorBtnValue{
       font-size: 14px;
@@ -83,6 +87,9 @@
       }
     }
   }
+  .button{
+    margin: auto;
+  }
   @include max-screen(700px){
     .inputBox, .selectSectorBtn, .textAreaBox{
       max-width: calc(100vw - 15px);
@@ -95,34 +102,6 @@
 /* <------------> */
 
 /* <------------> */
-/* SUCCESS PAGE */
-/* <------------> */
-
-.successPage{
-  padding: 50px 0;
-  text-align: center;
-  min-height: calc(100vh - 185px);
-  h1{
-    font-size: 60px;
-    span{
-      margin-left: 0;
-    }
-  }
-  .button{
-    display: inline-block;
-  }
-  @include max-screen(400px){
-    h1{
-      font-size: 16vw;
-    }
-  }
-}
-
-/* <------------> */
-/* //SUCCESS PAGE */
-/* <------------> */
-
-/* <------------> */
 /* ANIMATIONS */
 /* <------------> */
 @keyframes required {
@@ -132,7 +111,7 @@
   }
   50%{
     border: 1px solid #ff0000;
-    box-shadow: 0 0 20px rgb(255, 0, 0);
+    box-shadow: 0 0 20px 5px rgb(255, 0, 0);
 
   }
   100%{

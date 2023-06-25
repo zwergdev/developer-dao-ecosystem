@@ -1,11 +1,13 @@
-import '../style/submit.scss'
 import Link from 'next/link'
 
 export default function () {
 	return (
-		<div className='successPage'>
+		<div className='miscPage'>
 			<h1>
-				The <span>form</span> has been <span>submitted</span>.
+				The <span>f</span>
+				<span>o</span>
+				<span>r</span>
+				<span>m</span> has been submitted.
 			</h1>
 			<p>Your project will soon appear on the website after verification.</p>
 			<Link href='/' className='button'>

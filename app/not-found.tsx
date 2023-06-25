@@ -1,11 +1,14 @@
 import Link from 'next/link'
-import './style/submit.scss'
 
 export default function () {
 	return (
-		<div className='successPage'>
+		<div className='miscPage'>
 			<h1>
-				<span>Not</span> Found
+				Not <span>f</span>
+				<span>o</span>
+				<span>u</span>
+				<span>n</span>
+				<span>d</span>
 			</h1>
 			<p>Could not find requested resource</p>
 			<Link className='button' href='/'>

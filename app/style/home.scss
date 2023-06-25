@@ -29,6 +29,11 @@ header{
     justify-content: space-between;
     align-items: center;
   }
+  @include max-screen(400px){
+    .logoBox span{
+      display: none;
+    }
+  }
 }
 
 /* <------------> */
@@ -39,8 +44,8 @@ header{
 /* HOME */
 /* <------------> */
 
-.mainBanner, .successPage{
-  height: calc(100vh - 55px);
+.mainBanner{
+  min-height: calc(100vh - 55px);
   text-align: left;
   display: flex;
   align-items: center;
@@ -62,7 +67,7 @@ header{
       font-weight: 500;
     }
   }
-  img{
+  .bannerImage{
     width: 50%;
     height: auto;
   }
@@ -88,6 +93,52 @@ header{
           color: $white;
         }
       }
+    }
+  }
+  @include max-screen(1000px){
+    height: auto;
+    flex-wrap: wrap;
+    padding: 75px 0;
+    .textBox{
+      padding: 0 30px;
+      margin-bottom: 75px;
+      h1, p{
+        max-width: 100%;
+      }
+    }
+    .bannerImage{
+      width: 65%;
+      margin: auto;
+    }
+  }
+  @include max-screen(800px){
+    .bannerImage{
+      padding: 0 30px;
+      width: 100%;
+    }
+  }
+  @include max-screen(500px){
+    .textBox, .bannerImage{
+      padding: 0 15px;
+    }
+  }
+  @include max-screen(455px){
+    .textBox, .bannerImage{
+      padding: 0;
+    }
+    .textBox{
+      h1{
+        font-size: 12vw;
+      }
+      p{
+        font-size: 19px;
+      }
+    }
+  }
+  @include max-screen(400px){
+    padding: 30px 0;
+    .textBox{
+      margin-bottom: 30px;
     }
   }
 }
@@ -135,7 +186,7 @@ header{
         height: 1px;
       }
       &::-webkit-scrollbar-track {
-        background-color: rgba(255, 255, 255, 0.45);
+        background-color: rgba(255, 255, 255, 0);
       }
       &::-webkit-scrollbar-thumb {
         background-color: rgba(255, 255, 255, 1);
@@ -227,6 +278,16 @@ header{
     }
     .projectsBox .item{
       max-width: 100%;
+    }
+  }
+  @include max-screen(400px){
+    .searchbarBox{
+      max-width: 310px;
+    }
+    .filtersBox{
+      .filters{
+        gap: 15px;
+      }
     }
   }
 }
@@ -370,4 +431,53 @@ footer{
 
 /* <------------> */
 /* //FOOTER */
+/* <------------> */
+
+/* <------------> */
+/* ERROR / NA / SUCCESS */
+/* <------------> */
+
+.miscPage{
+  padding-top: 150px;
+  text-align: center;
+  min-height: calc(100vh - 118px);
+  h1{
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 110%;
+    span{
+      &:nth-child(1){
+        color: #9B86C2;
+      }
+      &:nth-child(2){
+        color: #B9E08B;
+      }
+      &:nth-child(3){
+        color: #FCF184;
+      }
+      &:nth-child(4){
+        color: #FF88B2;
+      }
+      &:nth-child(5){
+        color: #8ed0ff;
+      }
+    }
+  }
+  p{
+    margin-bottom: 30px;
+  }
+  .button{
+    display: inline-flex;
+  }
+  @include max-screen(400px){
+    h1{
+      font-size: 16vw;
+    }
+  }
+}
+
+/* <------------> */
+/* //ERROR / NA / SUCCESS */
 /* <------------> */

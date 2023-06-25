@@ -1,5 +1,5 @@
 'use client'
-import {useEffect, useState} from 'react'
+import {useCallback, useEffect, useState} from 'react'
 import {Project} from '@/app/api/projects/projects'
 import {Status} from '@/services/types'
 import {getProjects, getProjectsByFilter} from '@/services/getProjects'
@@ -14,6 +14,22 @@ export default function Home() {
 	const [filter, setFilter] = useState<string>('')
 	const [status, setStatus] = useState<Status>(Status.loading)
 
+	const fetchData = useCallback(
+		(type: string) => {
+			setStatus(Status.fetching)
+			if (type === 'filter') {
+				getProjectsByFilter(filter)
+					.then(setProjects)
+					.finally(() => setStatus(Status.fetched))
+			} else {
+				getProjects(type)
+					.then(setProjects)
+					.finally(() => setStatus(Status.fetched))
+			}
+		},
+		[filter]
+	)
+
 	useEffect(() => {
 		if (status === Status.loading) {
 			fetchData('12')
@@ -22,20 +38,7 @@ export default function Home() {
 		} else if (status === Status.filter) {
 			fetchData(filter ? 'filter' : '12')
 		}
-	}, [status])
-
-	const fetchData = (type: string) => {
-		setStatus(Status.fetching)
-		if (type === 'filter') {
-			getProjectsByFilter(filter)
-				.then(setProjects)
-				.finally(() => setStatus(Status.fetched))
-		} else {
-			getProjects(type)
-				.then(setProjects)
-				.finally(() => setStatus(Status.fetched))
-		}
-	}
+	}, [status, fetchData])
 
 	return (
 		<HomeContext.Provider value={{status, setStatus, setProjects, setFilter, filter, projects}}>

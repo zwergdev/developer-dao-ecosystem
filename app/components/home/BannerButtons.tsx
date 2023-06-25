@@ -6,7 +6,7 @@ export default function BannerButtons() {
 			<Link to='projects' className='button explore' smooth={true} offset={-80} duration={500}>
 				Explore
 			</Link>
-			<a href='https://guild.xyz/dd' className='button join'>
+			<a href='https://guild.xyz/dd' target='_blank' className='button join'>
 				Join
 			</a>
 		</>

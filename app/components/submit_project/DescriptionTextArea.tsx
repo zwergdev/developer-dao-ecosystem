@@ -9,10 +9,10 @@ const DescriptionTextArea = () => {
 		if (desc === '' && status === 'Check required lines') {
 			return 'required'
 		}
-		if (length > 100) return 'resized100'
-		if (length > 200) return 'resized200'
-		if (length > 300) return 'resized300'
 		if (length > 400) return 'resized400'
+		if (length > 300) return 'resized300'
+		if (length > 200) return 'resized200'
+		if (length > 100) return 'resized100'
 	}
 
 	return (
