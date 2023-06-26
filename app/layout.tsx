@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: 'Developer DAO Ecosystem',
 		description: 'Explore Developer DAO ecosystem',
-		url: 'https://github.com/zwergdev/developer-dao-ecosystem',
+		url: 'https://developer-dao-ecosystem.vercel.app',
 		siteName: 'Developer DAO Ecosystem',
 		locale: 'en_US',
 		type: 'website'
