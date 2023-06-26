@@ -1,5 +1,5 @@
 //export const SITE_URL = 'http://localhost:3000'
-export const SITE_URL = 'https://developer-dao-ecosystem.vercel.app'
+export const SITE_URL = 'https://devdao-ecosystem.vercel.app'
 
 export const getProjects = async (size: string) => {
 	const response = await fetch(`${SITE_URL}/api/projects?s=${size}`, {next: {revalidate: 3600}})
